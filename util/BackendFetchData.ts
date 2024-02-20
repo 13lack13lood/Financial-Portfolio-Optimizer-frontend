@@ -5,7 +5,7 @@ const backend = process.env.NEXT_PUBLIC_BACKEND_ENDPOINT;
 const fetchOptimizedPortfolio = async (tickers: string) => {
     let input = tickers.trim().split(" ");
 
-    const res = await fetch(backend + "portfolio", {
+    const res = await fetch(backend + "portfolio/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
